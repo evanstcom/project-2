@@ -802,11 +802,10 @@ a {
 /* FOOTER */
 .footer {
   background-color: #444240;
-  min-height: 275px;
-  padding-bottom: 65px;
+  height: 275px;
 }
 .footer__container {
-  padding-top: 80px;
+  padding-top: 60px;
   display: flex;
   justify-content: space-around;
 }
