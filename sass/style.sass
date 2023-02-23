@@ -1,0 +1,409 @@
+@import "normalizez.scss"
+@import "resets.scss"
+
+*
+    box-sizing: border-box
+
+@font-face
+    font-family: 'Prata'
+    src: url('../fonts/Prata-Regular.ttf')
+    font-style: normal
+    font-weight: normal
+
+@font-face
+    font-family: 'Roboto'
+    src: url('../fonts/Roboto-Regular.ttf')
+    font-style: normal
+    font-weight: normal
+
+@font-face
+    font-family: "Roboto"
+    src: url('../fonts/Roboto-Bold.ttf')
+    font-style: normal
+    font-weight: bold
+
+@font-face
+    font-family: 'PlayfairDisplay'
+    src: url('../fonts/PlayfairDisplay-Regular.ttf')
+    font-style: normal
+    font-weight: normal
+
+@font-face
+    font-family: "PlayfairDisplay"
+    src: url('../fonts/PlayfairDisplay-SemiBold.ttf')
+    font-style: normal
+    font-weight: bold
+
+html
+    font-family: "PlayfairDisplay"
+    font-weight: normal
+
+body
+    background-color: white
+
+$color-primary: #E6C8B4
+$color-dark: #444240
+
+a
+    text-decoration: none
+    color: $color-dark
+    cursor: pointer
+
+.container
+    max-width: 1190px
+    margin: 0 auto
+    padding: 0 10px 0
+    position: relative
+
+.title
+    font-size: 32px
+    line-height: 43px
+    color: #1B1A17
+
+.btn
+    width: 205px
+    height: 64px
+    background-color: #444240
+    color: white
+    font-family: 'Roboto'
+    font-weight: 500
+    font-size: 12px
+    line-height: 14px
+    letter-spacing: 0.05em
+    text-transform: uppercase
+    border-color: transparent
+    transition: all 0.4s
+    cursor: pointer
+    &:hover
+        border-color: #444240
+        background-color: transparent
+        color: #444240
+    &_primary
+        background-color: #D4B098
+        &:hover
+            border-color: #D4B098
+            background-color: transparent
+            color: #D4B098
+
+.nav-menu
+    &__list
+        display: flex
+        gap: 65px
+    &__list-item
+        margin-right: 30px
+        font-size: 14px
+        line-height: 16px
+        color: #555248
+        &:last-child
+            margin-right: 0
+
+.header
+    font-family: "Roboto"
+    font-weight: normal
+    height: 85px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__icons-box
+        display: flex
+        align-items: center
+        gap: 23px
+        padding-left: 10px
+    &__icon
+        position: relative
+        font-size: 8px
+        line-height: 9px
+        color: #1B1A17
+    &__like-items
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        width: 13px
+        height: 13px
+        background-color: $color-primary
+        border-radius: 50%
+        top: -5px
+        right: -8px
+    &__img
+        width: 16px
+
+.main-section
+    margin-bottom: 80px
+    &__content
+        overflow: hidden
+    &__content-container
+        height: 795px
+        display: flex
+        align-items: center
+
+.left-wrapper
+    display: flex
+    flex-direction: column
+    justify-content: center
+    margin-right: 10px
+    padding-left: 80px
+    position: relative
+    &__title
+        font-size: 45px
+        line-height: 60px
+        color: #1B1A17
+        margin-bottom: 15px
+    &__subtitle
+        font-size: 30px
+        line-height: 40px
+        color: #1B1A17
+        margin-bottom: 40px
+    &__text
+        font-weight: 300
+        font-size: 14px
+        line-height: 21px
+        color: rgba(27, 26, 23, 0.82)
+        margin-bottom: 64px
+    &:before
+        content: ''
+        height: 1px
+        width: 50px
+        background-color: #8B8371
+        display: inline-block
+        margin-right: 15px
+        position: absolute
+        left: 0
+        top: 35px
+.right-wrapper
+    position: relative
+    &__elipse
+        position: relative
+        img
+            position: absolute
+            top: 0px
+            left: -70px
+            z-index: -1
+    &__img
+        padding-left: 150px
+        height: 100%
+    &__features
+        font-family: 'Prata'
+        font-size: 16px
+        line-height: 22px
+        color: #1B1A17
+        position: absolute
+        &_after
+            top: 150px
+            left: 50px
+            &::after
+                content: ''
+                height: 1px
+                width: 50px
+                background-color: #8B8371
+                display: inline-block
+                position: absolute
+                top: 10px
+                left: 90px
+        &_before
+            top: 650px
+            right: -70px
+            &::before
+                content: ''
+                height: 1px
+                width: 50px
+                background-color: #8B8371
+                display: inline-block
+                position: absolute
+                top: 10px
+                left: -70px
+
+/* ВТОРАЯ СЕКЦИЯ */
+.second-section
+    margin-bottom: 85px
+    &__title
+        text-align: center
+    &__catalog
+        text-align: right
+        margin-bottom: 25px
+    &__catalog-link
+        text-align: right
+        font-family: 'Roboto'
+        font-weight: 500
+        font-size: 16px
+        line-height: 25px
+        border-bottom: 2px solid #8B8371
+    &__cards-box
+        display: grid
+        gap: 30px
+        grid-template-columns: repeat(auto-fill, minmax(370px, 1fr))
+    &__cards-item
+        display: flex
+        flex-direction: column
+
+.cards-item
+    &__name
+        font-weight: 700
+        font-size: 14px
+        line-height: 24px
+        letter-spacing: 0.03em
+        color: rgba(27, 26, 23, 0.82)
+        padding: 40px 0 10px 40px
+    &__price
+        padding: 0 0 2px 40px
+        font-family: 'Prata'
+        font-size: 14px
+        line-height: 16px
+        color: rgba(27, 26, 23, 0.82)
+    &__circl
+        width: 313px
+        height: 313px
+        border-radius: 50%
+        margin-bottom: 20px
+        position: relative
+    &__link
+        font-size: 16px
+        line-height: 21px
+        color: #1B1A17
+        padding: 0 0 40px 88px
+        position: relative
+        &::before
+            content: ''
+            height: 1px
+            width: 30px
+            background-color: #8B8371
+            display: inline-block
+            position: absolute
+            top: 10px
+            left: 40px
+    &__img
+        width: 313px
+        position: absolute
+        left: 0
+
+/* ТРЕТЬЯ СЕКЦИЯ */
+
+.third-section
+    background-color: #FDFDFB
+    height: 520px
+    margin-bottom: 80px
+    position: relative
+    overflow: hidden
+    &__design-block
+        position: absolute
+        height: 100%
+        width: 35%
+        background-color: #F7F5EF
+    &__design-circl
+        border: 1px solid #D4B098
+        border-radius: 50%
+        background: transparent
+        position: absolute
+        z-index: 10
+        &_small
+            width: 360px
+            height: 360px
+            top: -150px
+            right: -150px
+        &_big
+            width: 745px
+            height: 745px
+            top: 30px
+            right: -500px
+
+    &__container
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 70px
+    &__title
+        margin-bottom: 38px
+    &__text
+        font-family: 'Roboto'
+        font-size: 16px
+        line-height: 150%
+        color: #444240
+        margin-bottom: 45px
+    &__img
+        width: 520px
+    &__slider
+        position: relative
+    &__slider-manage
+        position: absolute
+        right: 70px
+        bottom: -35px
+
+.slider
+    &__manage
+        display: flex
+        align-items: center
+        gap: 20px
+    &__num
+        font-family: 'Prata'
+        font-size: 12px
+        line-height: 16px
+        color: rgba(27, 26, 23, 0.82)
+    &__arrow
+        cursor: pointer
+
+/* 4 СЕКЦИЯ */
+
+.fourth-section
+    margin-bottom: 90px
+    &__container
+        display: flex
+    &__content
+        margin-right: 70px
+    &__title
+        padding-top: 140px
+        margin-bottom: 40px
+    &__text
+        font-family: 'Roboto'
+        font-size: 16px
+        line-height: 27px
+        color: #444240
+        margin-bottom: 120px
+        span
+            font-weight: bold
+    &__icons-box
+        display: flex
+        align-items: center
+        gap: 18px
+    &__images-table
+        display: flex
+        gap: 10px
+    &__images-small
+        display: flex
+        flex-direction: column
+        gap: 10px
+        img
+            width: 242px
+/* FOOTER */
+
+.footer
+    background-color: #444240
+    min-height: 275px
+    &__container
+        padding-top: 80px
+        display: flex
+        justify-content: space-around
+    &__column
+        display: flex
+        flex-direction: column
+    &__logo
+        width: 130px
+        margin-bottom: 22px
+    &__title
+        font-family: 'Roboto'
+        font-style: normal
+        font-weight: 700
+        font-size: 14px
+        line-height: 35px
+        letter-spacing: 0.07em
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 22px
+    &__text
+        font-family: 'Roboto'
+        font-size: 12px
+        line-height: 14px
+        color: rgba(255, 255, 255, 0.75)
+        margin-bottom: 15px
+        &:last-child
+            margin-bottom: 0
