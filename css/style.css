@@ -434,6 +434,7 @@ a {
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  border: 2px solid transparent;
   border-color: transparent;
   transition: all 0.4s;
   cursor: pointer;
@@ -454,7 +455,7 @@ a {
 
 .nav-menu__list {
   display: flex;
-  gap: 65px;
+  gap: 40px;
 }
 .nav-menu__list-item {
   margin-right: 30px;
@@ -567,7 +568,7 @@ a {
 }
 .right-wrapper__img {
   padding-left: 150px;
-  height: 100%;
+  height: 798px;
 }
 .right-wrapper__features {
   font-family: "Prata";
@@ -660,7 +661,7 @@ a {
   font-size: 16px;
   line-height: 21px;
   color: #1B1A17;
-  padding: 0 0 40px 88px;
+  padding: 0 0 40px 60px;
   position: relative;
 }
 .cards-item__link::before {
@@ -671,7 +672,7 @@ a {
   display: inline-block;
   position: absolute;
   top: 10px;
-  left: 40px;
+  left: 20px;
 }
 .cards-item__img {
   width: 313px;
@@ -715,7 +716,6 @@ a {
 .third-section__container {
   height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 70px;
 }
@@ -734,6 +734,7 @@ a {
 }
 .third-section__slider {
   position: relative;
+  padding-left: 70px;
 }
 .third-section__slider-manage {
   position: absolute;
@@ -802,6 +803,7 @@ a {
 .footer {
   background-color: #444240;
   min-height: 275px;
+  padding-bottom: 65px;
 }
 .footer__container {
   padding-top: 80px;
